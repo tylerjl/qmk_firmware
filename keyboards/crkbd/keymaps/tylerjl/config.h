@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
-#define RGBLIGHT_SPLIT
+/* #define RGBLIGHT_SPLIT */
 
 #define USE_SERIAL_PD2
 
@@ -46,6 +46,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_HUE_STEP 10
     #define RGBLIGHT_SAT_STEP 17
     #define RGBLIGHT_VAL_STEP 17
+#endif
+
+#ifdef RGB_MATRIX_ENABLE
+    #define RGB_MATRIX_KEYPRESSES
+    #define RGB_MATRIX_KEYRELEASES
+    #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+    #define RGB_DISABLE_WHEN_USB_SUSPENDED
+
+    #define ENABLE_RGB_MATRIX_BREATHING
+    #define ENABLE_RGB_MATRIX_SPLASH
+    #define ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
 #endif
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
